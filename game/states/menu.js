@@ -9,35 +9,35 @@ Menu.prototype = {
   create: function() {
     // add the background sprite
     this.background = this.game.add.sprite(0,0,'background');
-    
+
     // add the ground sprite as a tile
     // and start scrolling in the negative x direction
     this.ground = this.game.add.tileSprite(0,400, 335,112,'ground');
     this.ground.autoScroll(-200,0);
 
     /** STEP 1 **/
-    // create a group to put the title assets in 
+    // create a group to put the title assets in
     // so they can be manipulated as a whole
     this.titleGroup = this.game.add.group()
-      
+
     /** STEP 2 **/
     // create the title sprite
     // and add it to the group
     this.title = this.add.sprite(0,0,'title');
     this.titleGroup.add(this.title);
-    
+
     /** STEP 3 **/
-    // create the bird sprite 
+    // create the dogger sprite
     // and add it to the title group
-    this.bird = this.add.sprite(200,5,'bird');
-    this.titleGroup.add(this.bird);
-    
+    this.dogger = this.add.sprite(200,5,'bird');
+    this.titleGroup.add(this.dogger);
+
     /** STEP 4 **/
-    // add an animation to the bird
+    // add an animation to the dogger
     // and begin the animation
-    this.bird.animations.add('flap');
-    this.bird.animations.play('flap', 12, true);
-    
+    this.dogger.animations.add('flap');
+    this.dogger.animations.play('flap', 12, true);
+
     /** STEP 5 **/
     // Set the originating location of the group
     this.titleGroup.x = 30;
